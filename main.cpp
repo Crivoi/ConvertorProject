@@ -5,25 +5,23 @@ using namespace std;
 long long grams, kilograms, pounds, milligrams, ounceav, ouncetroy, tons;
 long long sqm, sqkm, sqcm, sqmm, sqft, sqin, sqyd, ha, ac;
 long long l, cl, ml, cubem, cubecm, cubedm, gal;
-long long time, speed, energy, density;
-long long degrees;
+long long time, speed, energy, density, pressure, length, fuel, degrees;
 int unitChoice, unitToConvert, choice;
 
 int main ()
 {
     cout << "Choose one of the following Units: \n";
-    cout << "For Weight      type 1. \n";
-    cout << "For Area        type 2. \n";
-    cout << "For Volume      type 3. \n";
-    cout << "For Time        type 4. \n";
-    cout << "For Speed       type 5. \n";
-    cout << "For Temperature type 6. \n";
-    cout << "For Length      type 7. \n";
-    cout << "For Energy      type 8. \n";
-    cout << "For Pressure    type 9. \n";
-    cout << "For Density     type 10. \n";
-    cout << "For Fuel        type 11. \n";
-    cout << "For Currency    type 12. \n";
+    cout << "For Weight       type 1. \n";
+    cout << "For Area         type 2. \n";
+    cout << "For Volume       type 3. \n";
+    cout << "For Time         type 4. \n";
+    cout << "For Speed        type 5. \n";
+    cout << "For Temperature  type 6. \n";
+    cout << "For Length       type 7. \n";
+    cout << "For Energy       type 8. \n";
+    cout << "For Pressure     type 9. \n";
+    cout << "For Density      type 10. \n";
+    cout << "For Fuel         type 11. \n";
     cout << endl;
 
 do
@@ -31,6 +29,9 @@ do
     cin >> unitChoice;
     switch (unitChoice)
     {
+    default:
+        cout << "Incorrect input. " << endl;
+    break;
     case 1:
         cout << "\nWeight: \n";
         cout << "Select Unit To Convert: \n";
@@ -45,7 +46,7 @@ do
 
         do
         {
-           cin >> unitToConvert;
+            cin >> unitToConvert;
            switch (unitToConvert)
            {
            case 1:
@@ -90,6 +91,9 @@ do
                     cout << "\nEnter number of Grams: ";
                     cin >> grams;
                     cout << "\n" << grams << " grams = " << grams * 0.000001 << " tons. " << endl;
+                    break;
+                   default:
+                    cout << "Incorrect input. " << endl;
                     break;
                    }
                }
@@ -139,6 +143,9 @@ do
                     cin >> kilograms;
                     cout << "\n" << kilograms << " kilograms = " << kilograms * 0.001 << " tons. " << endl;
                     break;
+                    default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                    }
                }
                while (choice!=1 && choice!=2 && choice!=3 &&
@@ -186,6 +193,9 @@ do
                     cout << "\nEnter number of Pounds: ";
                     cin >> pounds;
                     cout << "\n" << pounds << " pounds = " << pounds * 0.000453592 << " tons. " << endl;
+                    break;
+                    default:
+                    cout << "Incorrect input. " << endl;
                     break;
                    }
                }
@@ -235,6 +245,9 @@ do
                     cin >> milligrams;
                     cout << "\n" << milligrams << " milligrams = " << milligrams * 0.000000001 << " tons. " << endl;
                     break;
+                    default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                  }
                }
                while (choice!=1 && choice!=2 && choice!=3 &&
@@ -282,6 +295,9 @@ do
                     cout << "\nEnter number of Ounces (AV): ";
                     cin >> ounceav;
                     cout << "\n" << ounceav << " ounces (AV) = " << ounceav * 0.0000283495 << " tons. " << endl;
+                    break;
+                    default:
+                    cout << "Incorrect input. " << endl;
                     break;
                    }
                }
@@ -331,6 +347,9 @@ do
                     cin >> ouncetroy;
                     cout << "\n" << ouncetroy << " ounces (Troy) = " << ouncetroy * 0.000031 << " tons. " << endl;
                     break;
+                    default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                   }
                }
                while (choice!=1 && choice!=2 && choice!=3 &&
@@ -379,11 +398,17 @@ do
                     cin >> tons;
                     cout << "\n" << tons << " tons = " << tons * 32150.72 << " ounces (Troy). " << endl;
                     break;
+                    default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                   }
                }
                while (choice!=1 && choice!=2 && choice!=3 &&
                       choice!=4 && choice!=5 && choice!=6);
                break;
+               default:
+                    cout << "Incorrect input. " << endl;
+                    break;
             }
         }
     while (unitToConvert!=1 && unitToConvert!=2 && unitToConvert!=3 &&
@@ -462,6 +487,9 @@ do
                         cin >> sqm;
                         cout << "\n" << sqm << " square meters = " << sqm * 1.19 << " square yards. " << endl;
                     break;
+                    default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -523,6 +551,9 @@ do
                         cin >> sqkm;
                         cout << "\n" << sqkm << " square kilometers = " << sqkm * 119598939.40 << " square yards. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -584,6 +615,9 @@ do
                         cin >> sqcm;
                         cout << "\n" << sqcm << " square centimeters = " << sqcm * 0.0001195 << " square yards. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -645,6 +679,9 @@ do
                         cin >> sqmm;
                         cout << "\n" << sqmm << " square millimeters = " << sqmm * 0.000001195 << " square yards. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -706,6 +743,9 @@ do
                         cin >> sqft;
                         cout << "\n" << sqft << " square feet = " << sqft * 0.1111 << " square yards. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -767,6 +807,9 @@ do
                         cin >> sqin;
                         cout << "\n" << sqin << " square inches = " << sqin * 0.0007716 << " square yards. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -828,6 +871,9 @@ do
                         cin >> ha;
                         cout << "\n" << ha << " hectares = " << ha * 11959.8939 << " square yards. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -889,6 +935,9 @@ do
                         cin >> ac;
                         cout << "\n" << ac << " acres = " << ac * 4839.996 << " square yards. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -950,12 +999,18 @@ do
                         cin >> sqyd;
                         cout << "\n" << sqyd << " square yards = " << sqyd * 0.0002066 << " acres. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
                        choice!=4 && choice!=5 && choice!=6 &&
                        choice!=7 && choice!=8);
                 break;
+                default:
+                    cout << "Incorrect input. " << endl;
+                    break;
             }
         }
         while (unitToConvert!=1 && unitToConvert!=2 && unitToConvert!=3 &&
@@ -965,13 +1020,13 @@ do
     case 3:
         cout << "\nVolume: \n";
         cout << "Select Unit To Convert: \n";
-        cout << "For Liters                 type 1. " << endl;
-        cout << "For Milliliters            type 2. " << endl;
-        cout << "For Centiliters            type 3. " << endl;
-        cout << "For Cube Meters            type 4. " << endl;
-        cout << "For Cube Decimeters        type 5. " << endl;
-        cout << "For Cube Centimeters       type 6. " << endl;
-        cout << "For Gallons                type 7. " << endl;
+        cout << "For Liters                  type 1. " << endl;
+        cout << "For Milliliters             type 2. " << endl;
+        cout << "For Centiliters             type 3. " << endl;
+        cout << "For Cubic Meters            type 4. " << endl;
+        cout << "For Cubic Decimeters        type 5. " << endl;
+        cout << "For Cubic Centimeters       type 6. " << endl;
+        cout << "For Gallons                 type 7. " << endl;
         cout << endl;
         do
         {
@@ -979,12 +1034,12 @@ do
             switch (unitToConvert)
             {
             case 1:
-                cout << "Liters -> Milliliters       type 1. " << endl;
-                cout << "Liters -> Centiliters       type 2. " << endl;
-                cout << "Liters -> Cube Meters       type 3. " << endl;
-                cout << "Liters -> Cube Decimeters   type 4. " << endl;
-                cout << "Liters -> Cube Centimeters  type 5. " << endl;
-                cout << "Liters -> Gallons           type 6. " << endl;
+                cout << "Liters -> Milliliters        type 1. " << endl;
+                cout << "Liters -> Centiliters        type 2. " << endl;
+                cout << "Liters -> Cubic Meters       type 3. " << endl;
+                cout << "Liters -> Cubic Decimeters   type 4. " << endl;
+                cout << "Liters -> Cubic Centimeters  type 5. " << endl;
+                cout << "Liters -> Gallons            type 6. " << endl;
                 cout << endl;
                 do
                 {
@@ -1004,35 +1059,38 @@ do
                     case 3:
                         cout << "\nEnter number of Liters: ";
                         cin >> l;
-                        cout << "\n" << l << " liters = " << l * 0.001 << " cube meters. " << endl;
+                        cout << "\n" << l << " liters = " << l * 0.001 << " cubic meters. " << endl;
                         break;
                     case 4:
                         cout << "\nEnter number of Liters: ";
                         cin >> l;
-                        cout << "\n" << l << " liters = " << l * 1 << " cube decimeters. " << endl;
+                        cout << "\n" << l << " liters = " << l * 1 << " cubic decimeters. " << endl;
                         break;
                     case 5:
                         cout << "\nEnter number of Liters: ";
                         cin >> l;
-                        cout << "\n" << l << " liters = " << l * 1000 << " cube centimeters. " << endl;
+                        cout << "\n" << l << " liters = " << l * 1000 << " cubic centimeters. " << endl;
                         break;
                     case 6:
                         cout << "\nEnter number of Liters: ";
                         cin >> l;
                         cout << "\n" << l << " liters = " << l * 0.2199 << " gallons. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
                        choice!=4 && choice!=5 && choice!=6);
                 break;
             case 2:
-                cout << "Milliliters -> Liters            type 1. " << endl;
-                cout << "Milliliters -> Centiliters       type 2. " << endl;
-                cout << "Milliliters -> Cube Meters       type 3. " << endl;
-                cout << "Milliliters -> Cube Decimeters   type 4. " << endl;
-                cout << "Milliliters -> Cube Centimeters  type 5. " << endl;
-                cout << "Milliliters -> Gallons           type 6. " << endl;
+                cout << "Milliliters -> Liters             type 1. " << endl;
+                cout << "Milliliters -> Centiliters        type 2. " << endl;
+                cout << "Milliliters -> Cubic Meters       type 3. " << endl;
+                cout << "Milliliters -> Cubic Decimeters   type 4. " << endl;
+                cout << "Milliliters -> Cubic Centimeters  type 5. " << endl;
+                cout << "Milliliters -> Gallons            type 6. " << endl;
                 cout << endl;
                 do
                 {
@@ -1052,22 +1110,25 @@ do
                    case 3:
                         cout << "\nEnter number of Milliliters: ";
                         cin >> ml;
-                        cout << "\n" << ml << "  milliliters = " << ml * 0.000001  << " cube meters. " << endl;
+                        cout << "\n" << ml << "  milliliters = " << ml * 0.000001  << " cubic meters. " << endl;
                     break;
                    case 4:
                         cout << "\nEnter number of Milliliters: ";
                         cin >> ml;
-                        cout << "\n" << ml << "  milliliters = " << ml * 0.001  << " cube decimeters. " << endl;
+                        cout << "\n" << ml << "  milliliters = " << ml * 0.001  << " cubic decimeters. " << endl;
                     break;
                    case 5:
                         cout << "\nEnter number of Milliliters: ";
                         cin >> ml;
-                        cout << "\n" << ml << "  milliliters = " << ml * 1  << " cube centimeters. " << endl;
+                        cout << "\n" << ml << "  milliliters = " << ml * 1  << " cubic centimeters. " << endl;
                     break;
                    case 6:
                         cout << "\nEnter number of Milliliters: ";
                         cin >> ml;
                         cout << "\n" << ml << "  milliliters = " << ml * 0.0002199  << " gallons. " << endl;
+                    break;
+                    default:
+                    cout << "Incorrect input. " << endl;
                     break;
                    }
                 }
@@ -1075,12 +1136,12 @@ do
                        choice!=4 && choice!=5 && choice!=6);
                 break;
             case 3:
-                cout << "Centiliters -> Liters            type 1. " << endl;
-                cout << "Centiliters -> Milliliters       type 2. " << endl;
-                cout << "Centiliters -> Cube Meters       type 3. " << endl;
-                cout << "Centiliters -> Cube Decimeters   type 4. " << endl;
-                cout << "Centiliters -> Cube Centimeters  type 5. " << endl;
-                cout << "Centiliters -> Gallons           type 6. " << endl;
+                cout << "Centiliters -> Liters             type 1. " << endl;
+                cout << "Centiliters -> Milliliters        type 2. " << endl;
+                cout << "Centiliters -> Cubic Meters       type 3. " << endl;
+                cout << "Centiliters -> Cubic Decimeters   type 4. " << endl;
+                cout << "Centiliters -> Cubic Centimeters  type 5. " << endl;
+                cout << "Centiliters -> Gallons            type 6. " << endl;
                 cout << endl;
                 do
                 {
@@ -1100,22 +1161,25 @@ do
                    case 3:
                        cout << "\nEnter number of Centiliters: ";
                         cin >> cl;
-                        cout << "\n" << cl << " centiliters = " << cl * 0.00001 << " cube meters. " << endl;
+                        cout << "\n" << cl << " centiliters = " << cl * 0.00001 << " cubic meters. " << endl;
                     break;
                    case 4:
                        cout << "\nEnter number of Centiliters: ";
                         cin >> cl;
-                        cout << "\n" << cl << " centiliters = " << cl * 0.01 << " cube decimeters. " << endl;
+                        cout << "\n" << cl << " centiliters = " << cl * 0.01 << " cubic decimeters. " << endl;
                     break;
                    case 5:
                        cout << "\nEnter number of Centiliters: ";
                         cin >> cl;
-                        cout << "\n" << cl << " centiliters = " << cl * 10 << " cube centimeters. " << endl;
+                        cout << "\n" << cl << " centiliters = " << cl * 10 << " cubic centimeters. " << endl;
                     break;
                    case 6:
                        cout << "\nEnter number of Centiliters: ";
                         cin >> cl;
                         cout << "\n" << cl << " centiliters = " << cl * 0.002199 << " gallons. " << endl;
+                    break;
+                    default:
+                    cout << "Incorrect input. " << endl;
                     break;
                    }
                 }
@@ -1123,12 +1187,12 @@ do
                        choice!=4 && choice!=5 && choice!=6);
                 break;
             case 4:
-                cout << "Cube Meters -> Liters            type 1. " << endl;
-                cout << "Cube Meters -> Milliliters       type 2. " << endl;
-                cout << "Cube Meters -> Centiliters       type 3. " << endl;
-                cout << "Cube Meters -> Cube Decimeters   type 4. " << endl;
-                cout << "Cube Meters -> Cube Centimeters  type 5. " << endl;
-                cout << "Cube Meters -> Gallons           type 6. " << endl;
+                cout << "Cubic Meters -> Liters             type 1. " << endl;
+                cout << "Cubic Meters -> Milliliters        type 2. " << endl;
+                cout << "Cubic Meters -> Centiliters        type 3. " << endl;
+                cout << "Cubic Meters -> Cubic Decimeters   type 4. " << endl;
+                cout << "Cubic Meters -> Cubic Centimeters  type 5. " << endl;
+                cout << "Cubic Meters -> Gallons            type 6. " << endl;
                 cout << endl;
                 do
                 {
@@ -1136,34 +1200,37 @@ do
                    switch (choice)
                    {
                    case 1:
-                       cout << "\nEnter number of Cube Meters: ";
+                       cout << "\nEnter number of Cubic Meters: ";
                         cin >> cubem;
-                        cout << "\n" << cubem << " cube meters = " << cubem * 1000 << " liters. " << endl;
+                        cout << "\n" << cubem << " cubic meters = " << cubem * 1000 << " liters. " << endl;
                     break;
                    case 2:
-                       cout << "\nEnter number of Cube Meters: ";
+                       cout << "\nEnter number of Cubic Meters: ";
                         cin >> cubem;
-                        cout << "\n" << cubem << " cube meters = " << cubem * 1000000 << " milliliters. " << endl;
+                        cout << "\n" << cubem << " cubic meters = " << cubem * 1000000 << " milliliters. " << endl;
                     break;
                    case 3:
-                       cout << "\nEnter number of Cube Meters: ";
+                       cout << "\nEnter number of Cubic Meters: ";
                         cin >> cubem;
-                        cout << "\n" << cubem << " cube meters = " << cubem * 100000 << " centiliters. " << endl;
+                        cout << "\n" << cubem << " cubic meters = " << cubem * 100000 << " centiliters. " << endl;
                     break;
                    case 4:
-                       cout << "\nEnter number of Cube Meters: ";
+                       cout << "\nEnter number of Cubic Meters: ";
                         cin >> cubem;
-                        cout << "\n" << cubem << " cube meters = " << cubem * 1000 << " cube decimeters. " << endl;
+                        cout << "\n" << cubem << " cubic meters = " << cubem * 1000 << " cubic decimeters. " << endl;
                     break;
                    case 5:
-                       cout << "\nEnter number of Cube Meters: ";
+                       cout << "\nEnter number of Cubic Meters: ";
                         cin >> cubem;
-                        cout << "\n" << cubem << " cube meters = " << cubem * 1000000 << " cube centimeters. " << endl;
+                        cout << "\n" << cubem << " cubic meters = " << cubem * 1000000 << " cubic centimeters. " << endl;
                     break;
                    case 6:
-                       cout << "\nEnter number of Cube Meters: ";
+                       cout << "\nEnter number of Cubic Meters: ";
                         cin >> cubem;
-                        cout << "\n" << cubem << " cube meters = " << cubem * 219.97 << " gallons. " << endl;
+                        cout << "\n" << cubem << " cubic meters = " << cubem * 219.97 << " gallons. " << endl;
+                    break;
+                    default:
+                    cout << "Incorrect input. " << endl;
                     break;
                    }
                 }
@@ -1171,12 +1238,12 @@ do
                        choice!=4 && choice!=5 && choice!=6);
                 break;
             case 5:
-                cout << "Cube Decimeters -> Liters            type 1. " << endl;
-                cout << "Cube Decimeters -> Milliliters       type 2. " << endl;
-                cout << "Cube Decimeters -> Centiliters       type 3. " << endl;
-                cout << "Cube Decimeters -> Cube Meters       type 4. " << endl;
-                cout << "Cube Decimeters -> Cube Centimeters  type 5. " << endl;
-                cout << "Cube Decimeters -> Gallons           type 6. " << endl;
+                cout << "Cubic Decimeters -> Liters             type 1. " << endl;
+                cout << "Cubic Decimeters -> Milliliters        type 2. " << endl;
+                cout << "Cubic Decimeters -> Centiliters        type 3. " << endl;
+                cout << "Cubic Decimeters -> Cubic Meters       type 4. " << endl;
+                cout << "Cubic Decimeters -> Cubic Centimeters  type 5. " << endl;
+                cout << "Cubic Decimeters -> Gallons            type 6. " << endl;
                 cout << endl;
                 do
                 {
@@ -1184,34 +1251,37 @@ do
                    switch (choice)
                    {
                    case 1:
-                       cout << "\nEnter number of Cube Decimeters: ";
+                       cout << "\nEnter number of Cubic Decimeters: ";
                         cin >> cubedm;
-                        cout << "\n" << cubedm << " cube decimeters = " << cubedm * 1 << " liters. " << endl;
+                        cout << "\n" << cubedm << " cubic decimeters = " << cubedm * 1 << " liters. " << endl;
                     break;
                    case 2:
-                       cout << "\nEnter number of Cube Decimeters: ";
+                       cout << "\nEnter number of Cubic Decimeters: ";
                         cin >> cubedm;
-                        cout << "\n" << cubedm << " cube decimeters = " << cubedm * 1000 << " milliliters. " << endl;
+                        cout << "\n" << cubedm << " cubic decimeters = " << cubedm * 1000 << " milliliters. " << endl;
                     break;
                    case 3:
-                       cout << "\nEnter number of Cube Decimeters: ";
+                       cout << "\nEnter number of Cubic Decimeters: ";
                         cin >> cubedm;
-                        cout << "\n" << cubedm << " cube decimeters = " << cubedm * 100 << " centiliters. " << endl;
+                        cout << "\n" << cubedm << " cubic decimeters = " << cubedm * 100 << " centiliters. " << endl;
                     break;
                    case 4:
-                       cout << "\nEnter number of Cube Decimeters: ";
+                       cout << "\nEnter number of Cubic Decimeters: ";
                         cin >> cubedm;
-                        cout << "\n" << cubedm << " cube decimeters = " << cubedm * 0.001 << " cube meters. " << endl;
+                        cout << "\n" << cubedm << " cubic decimeters = " << cubedm * 0.001 << " cubic meters. " << endl;
                     break;
                    case 5:
-                       cout << "\nEnter number of Cube Decimeters: ";
+                       cout << "\nEnter number of Cubic Decimeters: ";
                         cin >> cubedm;
-                        cout << "\n" << cubedm << " cube decimeters = " << cubedm * 1000 << " cube centimeters. " << endl;
+                        cout << "\n" << cubedm << " cubic decimeters = " << cubedm * 1000 << " cubic centimeters. " << endl;
                     break;
                    case 6:
-                       cout << "\nEnter number of Cube Decimeters: ";
+                       cout << "\nEnter number of Cubic Decimeters: ";
                         cin >> cubedm;
-                        cout << "\n" << cubedm << " cube decimeters = " << cubedm * 0.2199 << " gallons. " << endl;
+                        cout << "\n" << cubedm << " cubic decimeters = " << cubedm * 0.2199 << " gallons. " << endl;
+                    break;
+                    default:
+                    cout << "Incorrect input. " << endl;
                     break;
                    }
                 }
@@ -1219,12 +1289,12 @@ do
                        choice!=4 && choice!=5 && choice!=6);
                 break;
             case 6:
-                cout << "Cube Centimeters -> Liters           type 1. " << endl;
-                cout << "Cube Centimeters -> Milliliters      type 2. " << endl;
-                cout << "Cube Centimeters -> Centiliters      type 3. " << endl;
-                cout << "Cube Centimeters -> Cube Meters      type 4. " << endl;
-                cout << "Cube Centimeters -> Cube Decimeters  type 5. " << endl;
-                cout << "Cube Centimeters -> Gallons          type 6. " << endl;
+                cout << "Cubic Centimeters -> Liters            type 1. " << endl;
+                cout << "Cubic Centimeters -> Milliliters       type 2. " << endl;
+                cout << "Cubic Centimeters -> Centiliters       type 3. " << endl;
+                cout << "Cubic Centimeters -> Cubic Meters      type 4. " << endl;
+                cout << "Cubic Centimeters -> Cubic Decimeters  type 5. " << endl;
+                cout << "Cubic Centimeters -> Gallons           type 6. " << endl;
                 cout << endl;
                 do
                 {
@@ -1232,34 +1302,37 @@ do
                    switch (choice)
                    {
                    case 1:
-                       cout << "\nEnter number of Cube Centimeters: ";
+                       cout << "\nEnter number of Cubic Centimeters: ";
                         cin >> cubecm;
-                        cout << "\n" << cubecm << " cube centimeters = " << cubecm * 0.001 << " liters. " << endl;
+                        cout << "\n" << cubecm << " cubic centimeters = " << cubecm * 0.001 << " liters. " << endl;
                     break;
                    case 2:
-                       cout << "\nEnter number of Cube Centimeters: ";
+                       cout << "\nEnter number of Cubic Centimeters: ";
                         cin >> cubecm;
-                        cout << "\n" << cubecm << " cube centimeters = " << cubecm * 1 << " milliliters. " << endl;
+                        cout << "\n" << cubecm << " cubic centimeters = " << cubecm * 1 << " milliliters. " << endl;
                     break;
                    case 3:
-                       cout << "\nEnter number of Cube Centimeters: ";
+                       cout << "\nEnter number of Cubic Centimeters: ";
                         cin >> cubecm;
-                        cout << "\n" << cubecm << " cube centimeters = " << cubecm * 0.1 << " centiliters. " << endl;
+                        cout << "\n" << cubecm << " cubic centimeters = " << cubecm * 0.1 << " centiliters. " << endl;
                     break;
                    case 4:
-                       cout << "\nEnter number of Cube Centimeters: ";
+                       cout << "\nEnter number of Cubic Centimeters: ";
                         cin >> cubecm;
-                        cout << "\n" << cubecm << " cube centimeters = " << cubecm * 0.000001 << " cube meters. " << endl;
+                        cout << "\n" << cubecm << " cubic centimeters = " << cubecm * 0.000001 << " cubic meters. " << endl;
                     break;
                    case 5:
-                       cout << "\nEnter number of Cube Centimeters: ";
+                       cout << "\nEnter number of Cubic Centimeters: ";
                         cin >> cubecm;
-                        cout << "\n" << cubecm << " cube centimeters = " << cubecm * 0.001 << " cube decimeters. " << endl;
+                        cout << "\n" << cubecm << " cubic centimeters = " << cubecm * 0.001 << " cubic decimeters. " << endl;
                     break;
                    case 6:
-                       cout << "\nEnter number of Cube Centimeters: ";
+                       cout << "\nEnter number of Cubic Centimeters: ";
                         cin >> cubecm;
-                        cout << "\n" << cubecm << " cube centimeters = " << cubecm * 0.0002199 << " gallons. " << endl;
+                        cout << "\n" << cubecm << " cubic centimeters = " << cubecm * 0.0002199 << " gallons. " << endl;
+                    break;
+                    default:
+                    cout << "Incorrect input. " << endl;
                     break;
                    }
                 }
@@ -1267,12 +1340,12 @@ do
                        choice!=4 && choice!=5 && choice!=6);
                 break;
             case 7:
-                cout << "Gallons -> Liters            type 1. " << endl;
-                cout << "Gallons -> Milliliters       type 2. " << endl;
-                cout << "Gallons -> Centiliters       type 3. " << endl;
-                cout << "Gallons -> Cube Meters       type 4. " << endl;
-                cout << "Gallons -> Cube Decimeters   type 5. " << endl;
-                cout << "Gallons -> Cube Centimeters  type 6. " << endl;
+                cout << "Gallons -> Liters             type 1. " << endl;
+                cout << "Gallons -> Milliliters        type 2. " << endl;
+                cout << "Gallons -> Centiliters        type 3. " << endl;
+                cout << "Gallons -> Cubic Meters       type 4. " << endl;
+                cout << "Gallons -> Cubic Decimeters   type 5. " << endl;
+                cout << "Gallons -> Cubic Centimeters  type 6. " << endl;
                 cout << endl;
                 do
                 {
@@ -1297,23 +1370,29 @@ do
                    case 4:
                        cout << "\nEnter number of Gallons: ";
                         cin >> gal;
-                        cout << "\n" << gal << " gallons = " << gal * 0.004546 << " cube meters. " << endl;
+                        cout << "\n" << gal << " gallons = " << gal * 0.004546 << " cubic meters. " << endl;
                     break;
                    case 5:
                        cout << "\nEnter number of Gallons: ";
                         cin >> gal;
-                        cout << "\n" << gal << " gallons = " << gal * 4.5459 << " cube decimeters. " << endl;
+                        cout << "\n" << gal << " gallons = " << gal * 4.5459 << " cubic decimeters. " << endl;
                     break;
                    case 6:
                        cout << "\nEnter number of Gallons: ";
                         cin >> gal;
-                        cout << "\n" << gal << " gallons = " << gal * 4546 << " cube centimeters. " << endl;
+                        cout << "\n" << gal << " gallons = " << gal * 4546 << " cubic centimeters. " << endl;
+                    break;
+                    default:
+                    cout << "Incorrect input. " << endl;
                     break;
                    }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
                        choice!=4 && choice!=5 && choice!=6);
                 break;
+                default:
+                    cout << "Incorrect input. " << endl;
+                    break;
             }
         }
         while (unitToConvert!=1 && unitToConvert!=2 && unitToConvert!=3 &&
@@ -1372,6 +1451,9 @@ do
                         cin >> time;
                         cout << "\n" << time << " seconds = " << time * 3.37e-8 << " years. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -1414,6 +1496,9 @@ do
                         cin >> time;
                         cout << "\n" << time << " minutes = " << time * 0.000002 << " years. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -1456,6 +1541,9 @@ do
                         cin >> time;
                         cout << "\n" << time << " hours = " << time * 0.000114 << " years. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -1498,6 +1586,9 @@ do
                         cin >> time;
                         cout << "\n" << time << " days = " << time * 0.00274 << " years. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -1540,6 +1631,9 @@ do
                         cin >> time;
                         cout << "\n" << time << " months = " << time * 0.083333 << " years. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -1582,11 +1676,17 @@ do
                         cin >> time;
                         cout << "\n" << time << " years = " << time * 12 << " months. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
                        choice!=4 && choice!=5);
                 break;
+                default:
+                    cout << "Incorrect input. " << endl;
+                    break;
             }
         }
         while (unitToConvert!=1 && unitToConvert!=2 && unitToConvert!=3 &&
@@ -1644,6 +1744,9 @@ do
                         cin >> speed;
                         cout << "\n" << speed << " m/s = " << speed * 1.943844 << " kn. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -1686,6 +1789,9 @@ do
                         cin >> speed;
                         cout << "\n" << speed << " km/h = " << speed * 0.539957 << " kn. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -1728,6 +1834,9 @@ do
                         cin >> speed;
                         cout << "\n" << speed << " cm/min = " << speed * 0.000324 << " kn. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -1770,6 +1879,9 @@ do
                         cin >> speed;
                         cout << "\n" << speed << " mph = " << speed * 0.868976 << " kn. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -1812,6 +1924,9 @@ do
                         cin >> speed;
                         cout << "\n" << speed << " ft/s = " << speed * 0.592484 << " kn. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -1854,11 +1969,17 @@ do
                         cin >> speed;
                         cout << "\n" << speed << " kn = " << speed * 1.68781 << " ft/s. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
                        choice!=4 && choice!=5);
                 break;
+                default:
+                    cout << "Incorrect input. " << endl;
+                    break;
             }
         }
         while (unitToConvert!=1 && unitToConvert!=2 && unitToConvert!=3 &&
@@ -1902,6 +2023,9 @@ do
                         cin >> degrees;
                         cout << "\n" << degrees << " Celsius = " << degrees * 493.47 << " Rankine. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3);
@@ -1931,6 +2055,9 @@ do
                         cin >> degrees;
                         cout << "\n" << degrees << " Fahrenheit = " << degrees * 460.67 << " Rankine. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3);
@@ -1960,6 +2087,9 @@ do
                         cin >> degrees;
                         cout << "\n" << degrees << " Kelvin = " << degrees * 1.8 << " Rankine. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3);
@@ -1989,10 +2119,16 @@ do
                         cin >> degrees;
                         cout << "\n" << degrees << " Rankine = " << degrees * 0.55 << " Kelvin. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3);
                 break;
+                default:
+                    cout << "Incorrect input. " << endl;
+                    break;
             }
         }
         while (unitToConvert!=1 && unitToConvert!=2 && unitToConvert!=3 &&
@@ -2025,15 +2161,33 @@ do
                     switch (choice)
                     {
                     case 1:
+                        cout << "\nEnter number of Meters: ";
+                        cin >> length;
+                        cout << "\n" << length << " meters = " << length * 0.001 << " kilometers. " << endl;
                         break;
                     case 2:
+                        cout << "\nEnter number of Meters: ";
+                        cin >> length;
+                        cout << "\n" << length << " meters = " << length * 100 << " centimeters. " << endl;
                         break;
                     case 3:
+                        cout << "\nEnter number of Meters: ";
+                        cin >> length;
+                        cout << "\n" << length << " meters = " << length * 39.37 << " inches. " << endl;
                         break;
                     case 4:
+                        cout << "\nEnter number of Meters: ";
+                        cin >> length;
+                        cout << "\n" << length << " meters = " << length * 3.28 << " feet. " << endl;
                         break;
                     case 5:
+                        cout << "\nEnter number of Meters: ";
+                        cin >> length;
+                        cout << "\n" << length << " meters = " << length * 1.093 << " yards. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2052,15 +2206,33 @@ do
                     switch (choice)
                     {
                     case 1:
+                        cout << "\nEnter number of Kilometers: ";
+                        cin >> length;
+                        cout << "\n" << length << " kilometers = " << length * 1000 << " meters. " << endl;
                         break;
                     case 2:
+                        cout << "\nEnter number of Kilometers: ";
+                        cin >> length;
+                        cout << "\n" << length << " kilometers = " << length * 100000 << " centimeters. " << endl;
                         break;
                     case 3:
+                        cout << "\nEnter number of Kilometers: ";
+                        cin >> length;
+                        cout << "\n" << length << " kilometers = " << length * 39370.07 << " inches. " << endl;
                         break;
                     case 4:
+                        cout << "\nEnter number of Kilometers: ";
+                        cin >> length;
+                        cout << "\n" << length << " kilometers = " << length * 3280.83 << " feet. " << endl;
                         break;
                     case 5:
+                        cout << "\nEnter number of Kilometers: ";
+                        cin >> length;
+                        cout << "\n" << length << " kilometers = " << length * 1093.61 << " yards. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2079,15 +2251,33 @@ do
                     switch (choice)
                     {
                     case 1:
+                        cout << "\nEnter number of Centimeters: ";
+                        cin >> length;
+                        cout << "\n" << length << " centimeters = " << length * 0.001 << " meters. " << endl;
                         break;
                     case 2:
+                        cout << "\nEnter number of Centimeters: ";
+                        cin >> length;
+                        cout << "\n" << length << " centimeters = " << length * 0.00001 << " kilometers. " << endl;
                         break;
                     case 3:
+                        cout << "\nEnter number of Centimeters: ";
+                        cin >> length;
+                        cout << "\n" << length << " centimeters = " << length * 0.3937 << " inches. " << endl;
                         break;
                     case 4:
+                        cout << "\nEnter number of Centimeters: ";
+                        cin >> length;
+                        cout << "\n" << length << " centimeters = " << length * 0.0328 << " feet. " << endl;
                         break;
                     case 5:
+                        cout << "\nEnter number of Centimeters: ";
+                        cin >> length;
+                        cout << "\n" << length << " centimeters = " << length * 0.01093 << " yards. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2106,15 +2296,33 @@ do
                     switch (choice)
                     {
                     case 1:
+                        cout << "\nEnter number of Inches: ";
+                        cin >> length;
+                        cout << "\n" << length << " inches = " << length * 0.0254 << " meters. " << endl;
                         break;
                     case 2:
+                        cout << "\nEnter number of Inches: ";
+                        cin >> length;
+                        cout << "\n" << length << " inches = " << length * 0.0000254 << " kilometers. " << endl;
                         break;
                     case 3:
+                        cout << "\nEnter number of Inches: ";
+                        cin >> length;
+                        cout << "\n" << length << " inches = " << length * 2.54 << " centimeters. " << endl;
                         break;
                     case 4:
+                        cout << "\nEnter number of Inches: ";
+                        cin >> length;
+                        cout << "\n" << length << " inches = " << length * 0.084 << " feet. " << endl;
                         break;
                     case 5:
+                        cout << "\nEnter number of Inches: ";
+                        cin >> length;
+                        cout << "\n" << length << " inches = " << length * 0.0277 << " yards. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2133,15 +2341,33 @@ do
                     switch (choice)
                     {
                     case 1:
+                        cout << "\nEnter number of Feet: ";
+                        cin >> length;
+                        cout << "\n" << length << " feet = " << length * 0.3048 << " meters. " << endl;
                         break;
                     case 2:
+                        cout << "\nEnter number of Feet: ";
+                        cin >> length;
+                        cout << "\n" << length << " feet = " << length * 0.0003048 << " kilometers. " << endl;
                         break;
                     case 3:
+                        cout << "\nEnter number of Feet: ";
+                        cin >> length;
+                        cout << "\n" << length << " feet = " << length * 30.48 << " centimeters. " << endl;
                         break;
                     case 4:
+                        cout << "\nEnter number of Feet: ";
+                        cin >> length;
+                        cout << "\n" << length << " feet = " << length * 12 << " inches. " << endl;
                         break;
                     case 5:
+                        cout << "\nEnter number of Feet: ";
+                        cin >> length;
+                        cout << "\n" << length << " feet = " << length * 0.33 << " yards. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2160,20 +2386,41 @@ do
                     switch (choice)
                     {
                     case 1:
+                        cout << "\nEnter number of Yards: ";
+                        cin >> length;
+                        cout << "\n" << length << " yards = " << length * 0.9144 << " meters. " << endl;
                         break;
                     case 2:
+                        cout << "\nEnter number of Yards: ";
+                        cin >> length;
+                        cout << "\n" << length << " yards = " << length * 0.0009144 << " kilometers. " << endl;
                         break;
                     case 3:
+                        cout << "\nEnter number of Yards: ";
+                        cin >> length;
+                        cout << "\n" << length << " yards = " << length * 91.44 << " centimeters. " << endl;
                         break;
                     case 4:
+                        cout << "\nEnter number of Yards: ";
+                        cin >> length;
+                        cout << "\n" << length << " yards = " << length * 36 << " inches. " << endl;
                         break;
                     case 5:
+                        cout << "\nEnter number of Yards: ";
+                        cin >> length;
+                        cout << "\n" << length << " yards = " << length * 3 << " feet. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
                        choice!=4 && choice!=5);
                 break;
+                default:
+                    cout << "Incorrect input. " << endl;
+                    break;
             }
         }
         while (unitToConvert!=1 && unitToConvert!=2 && unitToConvert!=3 &&
@@ -2223,6 +2470,9 @@ do
                         cin >> energy;
                         cout << "\n" << energy << " joules = " << energy * 0.737562 << " Foot*Pound Force. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2259,6 +2509,9 @@ do
                         cin >> energy;
                         cout << "\n" << energy << " kilojoules = " << energy * 737.562149 << " Foot*Pound Force. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2295,6 +2548,9 @@ do
                         cin >> energy;
                         cout << "\n" << energy << " calories = " << energy * 3.088025 << " Foor*Pound Force. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2331,6 +2587,9 @@ do
                         cin >> energy;
                         cout << "\n" << energy << " kilocalories = " << energy * 3088.025207 << " Foot*Pound Force. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2367,11 +2626,17 @@ do
                         cin >> energy;
                         cout << "\n" << energy << " Foot*Pound Force = " << energy * 0.000324 << " kilocalories. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
                        choice!=4);
                 break;
+                default:
+                    cout << "Incorrect input. " << endl;
+                    break;
             }
         }
         while (unitToConvert!=1 && unitToConvert!=2 && unitToConvert!=3 &&
@@ -2421,6 +2686,9 @@ do
                         cin >> pressure;
                         cout << "\n" << pressure << " pascal = " << pressure * 0.007501 << " millimeters of mercury. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2457,6 +2725,9 @@ do
                         cin >> pressure;
                         cout << "\n" << pressure << " atmospheres = " << pressure * 760.0021 << " millimeters of mercury. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2493,6 +2764,9 @@ do
                         cin >> pressure;
                         cout << "\n" << pressure << " torr = " << pressure * 1 << " millimeters of mercury. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2529,6 +2803,9 @@ do
                         cin >> pressure;
                         cout << "\n" << pressure << " bar = " << pressure * 750.063755 << " millimeters of mercury. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2565,11 +2842,17 @@ do
                         cin >> pressure;
                         cout << "\n" << pressure << " millimeters of mercury = " << pressure * 0.001333 << " bar. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
                        choice!=4);
                 break;
+                default:
+                    cout << "Incorrect input. " << endl;
+                    break;
             }
         }
         while (unitToConvert!=1 && unitToConvert!=2 && unitToConvert!=3 &&
@@ -2619,6 +2902,9 @@ do
                         cin >> density;
                         cout << "\n" << density << " kilograms/cubic meter = " << density * 0.160359 << " ounces/gallon. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2655,6 +2941,9 @@ do
                         cin >> density;
                         cout << "\n" << density << " kilograms/liter = " << density * 160.358613 << " ounces/gallon. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2691,6 +2980,9 @@ do
                         cin >> density;
                         cout << "\n" << density << " grams/cubic centimeter = " << density * 160.358613 << " ounces/gallon. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2727,6 +3019,9 @@ do
                         cin >> density;
                         cout << "\n" << density << " pounds/cubic foot = " << density * 2.568699 << " ounces/gallon. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
@@ -2763,11 +3058,17 @@ do
                         cin >> density;
                         cout << "\n" << density << " ounces/gallon = " << density * 0.389302 << " pounds/cubic foot. " << endl;
                         break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
                     }
                 }
                 while (choice!=1 && choice!=2 && choice!=3 &&
                        choice!=4);
                 break;
+                default:
+                    cout << "Incorrect input. " << endl;
+                    break;
             }
         }
         while (unitToConvert!=1 && unitToConvert!=2 && unitToConvert!=3 &&
@@ -2776,16 +3077,105 @@ do
     case 11:
         cout << "\nFuel Consume: \n";
         cout << "Select Unit To Convert: \n";
-        break;
-    case 12:
-        cout << "\nCurrency: \n";
-        break;
-}
+        cout << "For Kilometers/Liter       type 1. " << endl;
+        cout << "For Liters/100Km           type 2. " << endl;
+        cout << "For Miles/Gallon           type 3. " << endl;
+        do
+        {
+            cin >> unitToConvert;
+            switch (unitToConvert)
+            {
+            case 1:
+                cout << "Kilometers/Liter -> Liters/100Km  type 1. " << endl;
+                cout << "Kilometers/Liter -> Miles/Gallon  type 2. " << endl;
+                cout << endl;
+                do
+                {
+                    cin >> choice;
+                    switch (choice)
+                    {
+                    case 1:
+                        cout << "\nEnter number of Kilometers/Liter: ";
+                        cin >> fuel;
+                        cout << "\n" << fuel << " kilometers/liter = " << fuel * 100 << " liters/100km. " << endl;
+                        break;
+                    case 2:
+                        cout << "\nEnter number of Kilometers/Liter: ";
+                        cin >> fuel;
+                        cout << "\n" << fuel << " kilometers/liter = " << fuel * 2.352145833 << " miles/gallon. " << endl;
+                        break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
+                    }
+                }
+                while (choice!=1 && choice!=2);
+                break;
+            case 2:
+                cout << "Liters/100 km -> Kilometers/Liter  type 1. " << endl;
+                cout << "Liters/100 km -> Miles/Gallon      type 2. " << endl;
+                cout << endl;
+                do
+                {
+                    cin >> choice;
+                    switch (choice)
+                    {
+                    case 1:
+                        cout << "\nEnter number of Liters/100 km: ";
+                        cin >> fuel;
+                        cout << "\n" << fuel << " liters/100km = " << fuel * 100 << " kilometers/liter. " << endl;
+                        break;
+                    case 2:
+                        cout << "\nEnter number of Liters/100 km: ";
+                        cin >> fuel;
+                        cout << "\n" << fuel << " liters/100km = " << fuel * 235.2145 << " miles/gallon. " << endl;
+                        break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
+                    }
+                }
+                while (choice!=1 && choice!=2);
+                break;
+            case 3:
+                cout << "Miles/Gallon -> Kilometers/Liter  type 1. " << endl;
+                cout << "Miles/Gallon -> Liters/100km      type 2. " << endl;
+                cout << endl;
+                do
+                {
+                    cin >> choice;
+                    switch (choice)
+                    {
+                    case 1:
+                        cout << "\nEnter number of Miles/Gallon: ";
+                        cin >> fuel;
+                        cout << "\n" << fuel << " miles/gallon = " << fuel * 0.42514 << " kilometers/liter. " << endl;
+                        break;
+                    case 2:
+                        cout << "\nEnter number of Miles/Gallon: ";
+                        cin >> fuel;
+                        cout << "\n" << fuel << " miles/gallon = " << fuel * 235.2145 << " liters/100km. " << endl;
+                        break;
+                        default:
+                    cout << "Incorrect input. " << endl;
+                    break;
+                    }
+                }
+                while (choice!=1 && choice!=2);
+                break;
+                default:
+                    cout << "Incorrect input. " << endl;
+                    break;
+            }
+        }
+        while (unitToConvert!=1 && unitToConvert!=2 && unitToConvert!=3);
+
+    }
 }
 while (unitChoice!=1  && unitChoice!=2  && unitChoice!=3 &&
        unitChoice!=4  && unitChoice!=5  && unitChoice!=6 &&
        unitChoice!=7  && unitChoice!=8  && unitChoice!=9 &&
-       unitChoice!=10 && unitChoice!=11 && unitChoice!=12);
+       unitChoice!=10 && unitChoice!=11);
 }
 
 
